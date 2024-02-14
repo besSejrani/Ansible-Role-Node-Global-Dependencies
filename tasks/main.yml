@@ -1,0 +1,12 @@
+---
+# =================================================
+# Install NPM Libraries Globally
+# =================================================
+- name: "Install global dependencies"
+  npm:
+    global: yes
+    name: "{{ item }}"
+  with_items:
+    - yarn
+    - pm2
+    - node-gyp
